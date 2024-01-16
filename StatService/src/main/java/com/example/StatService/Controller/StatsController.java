@@ -30,7 +30,7 @@ public class StatsController {
         playerStatsMap.put(playerStats1.getPlayerId(), playerStats1);
         playerStatsMap.put(playerStats2.getPlayerId(), playerStats2);
     }
-    @ApiOperation(value = "Get stats-teams by id ", response = Iterable.class, tags = "getStatsTeamById")
+    @ApiOperation(value = "Get stats-teams by id ", response = Iterable.class, tags = "GetStatsTeamById")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Suceess|OK"),
             @ApiResponse(code = 401, message = "not authorized!"),
@@ -41,7 +41,7 @@ public class StatsController {
     public ResponseEntity<TeamStats> getTeamStats(@PathVariable Long teamId) {
         return ResponseEntity.ok(teamStatsMap.get(teamId));
     }
-    @ApiOperation(value = "Get stats-players by id ", response = Iterable.class, tags = "getStatsPlayerById")
+    @ApiOperation(value = "Get stats-players by id ", response = Iterable.class, tags = "GetStatsPlayerById")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Suceess|OK"),
             @ApiResponse(code = 401, message = "not authorized!"),
@@ -53,6 +53,6 @@ public class StatsController {
         return ResponseEntity.ok(playerStatsMap.get(playerId));
     }
 
-    // Assurez-vous que le service s'enregistre auprès d'Eureka (à implémenter)
+
 
 }

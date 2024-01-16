@@ -27,7 +27,7 @@ public class PlayerController {
         players.put(player3.getId(), player3);
 
     }
-    @ApiOperation(value = "Get player by id ", response = Iterable.class, tags = "getteambyid")
+    @ApiOperation(value = "Get player by id ", response = Iterable.class, tags = "GetPlayerById")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Suceess|OK"),
             @ApiResponse(code = 401, message = "not authorized!"),
@@ -39,7 +39,7 @@ public class PlayerController {
         return ResponseEntity.ok(players.get(id));
     }
 
-    @ApiOperation(value = "post player ", response = Iterable.class, tags = "postplayer")
+    @ApiOperation(value = "post player ", response = Iterable.class, tags = "PostPlayer")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Suceess|OK"),
             @ApiResponse(code = 401, message = "not authorized!"),
@@ -50,7 +50,7 @@ public class PlayerController {
         players.put(player.getId(), player);
         return ResponseEntity.ok("Player created successfully");
     }
-    @ApiOperation(value = "delete player by id ", response = Iterable.class, tags = "deleteplayerbyid")
+    @ApiOperation(value = "delete player by id ", response = Iterable.class, tags = "DeletePlayerById")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Suceess|OK"),
             @ApiResponse(code = 401, message = "not authorized!"),
@@ -62,7 +62,7 @@ public class PlayerController {
         return ResponseEntity.ok("Player deleted successfully");
 
     }
-    @ApiOperation(value = "put player ", response = Iterable.class, tags = "put player")
+    @ApiOperation(value = "put player by id ", response = Iterable.class, tags = "PutPlayerById")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Suceess|OK"),
             @ApiResponse(code = 401, message = "not authorized!"),
